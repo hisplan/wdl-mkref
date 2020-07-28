@@ -1,0 +1,15 @@
+{
+    "FilterBiotypes.gtf": "s3://dp-lab-batch/cromwell-execution/mkref/735f7b4c-e142-46d0-af61-c1f73ab9d8aa/call-MergeGtf/merged.gtf",
+    "FilterBiotypes.biotypes": [
+        "protein_coding",
+        "lncRNA",
+        "IG_V_gene",
+        "IG_C_gene",
+        "IG_J_gene",
+        "TR_C_gene",
+        "TR_J_gene",
+        "TR_V_gene",
+        "TR_D_gene",
+        "IG_D_gene"
+    ]
+}

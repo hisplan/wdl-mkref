@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-modules="RunSTAR Merge AddPrefix DownloadEnsembl"
+modules="FilterBiotypes RunSTAR Merge AddPrefix DownloadEnsembl"
 
 for module_name in $modules
 do

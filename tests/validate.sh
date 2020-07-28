@@ -3,7 +3,7 @@
 #hack: get dependency set up
 ln -s ../modules/ modules
 
-modules="RunSTAR Merge AddPrefix DownloadEnsembl"
+modules="FilterBiotypes RunSTAR Merge AddPrefix DownloadEnsembl"
 
 for module_name in $modules
 do
