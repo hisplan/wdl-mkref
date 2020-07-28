@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-modules="Merge AddPrefix DownloadEnsembl"
+modules="RunSTAR Merge AddPrefix DownloadEnsembl"
 
 for module_name in $modules
 do

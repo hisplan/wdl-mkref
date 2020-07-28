@@ -3,7 +3,7 @@
 #hack: get dependency set up
 ln -s ../modules/ modules
 
-modules="Merge AddPrefix DownloadEnsembl"
+modules="RunSTAR Merge AddPrefix DownloadEnsembl"
 
 for module_name in $modules
 do
