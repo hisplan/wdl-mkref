@@ -1,0 +1,6 @@
+{
+    "AddPrefix.humanGtf": "s3://dp-lab-batch/cromwell-execution/mkref/75fb3455-9160-473b-90a5-e1b44956be87/call-DownloadEnsemblHuman/hg.gtf.gz",
+    "AddPrefix.humanFasta": "s3://dp-lab-batch/cromwell-execution/mkref/75fb3455-9160-473b-90a5-e1b44956be87/call-DownloadEnsemblHuman/hg.fa.gz",
+    "AddPrefix.mouseGtf": "tbd",
+    "AddPrefix.mouseFasta": "tbd"
+}

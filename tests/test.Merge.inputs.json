@@ -1,0 +1,7 @@
+{
+    "Merge.files": [
+        "HUMAN.gtf",
+        "MOUSE.gtf"
+    ],
+    "Merge.extension": "gtf"
+}
