@@ -3,12 +3,16 @@ version 1.0
 import "modules/DownloadEnsembl.wdl" as DownloadEnsembl
 import "modules/AddPrefix.wdl" as AddPrefix
 import "modules/Merge.wdl" as Merge
+import "modules/FilterBiotypes.wdl" as FilterBiotypes
+import "modules/RunSTAR.wdl" as RunSTAR
 
 workflow mkref {
 
     input {
         String genomeVersion
         String ensemblVersion
+        Array[String] biotypes
+        Int sjdbOverhang
     }
 
     call DownloadEnsembl.DownloadEnsemblHuman {
@@ -59,8 +63,21 @@ workflow mkref {
             extension = "fasta"
     }
 
+    call FilterBiotypes.FilterBiotypes {
+        input:
+            biotypes = biotypes,
+            gtf = MergeGtf.outMergedFile
+    }
+
+    call RunSTAR.RunSTAR {
+        input:
+            fasta = MergeFasta.outMergedFile,
+            gtf = FilterBiotypes.outGtf,
+            sjdbOverhang = sjdbOverhang
+    }
+
     output {
-        File outMergedGtf = MergeGtf.outMergedFile
-        File outMergedFasta = MergeFasta.outMergedFile
+        File outGtf = FilterBiotypes.outGtf
+        Array[File] outSTAR = RunSTAR.outs
     }
 }
