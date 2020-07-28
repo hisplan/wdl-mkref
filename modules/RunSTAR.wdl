@@ -9,6 +9,7 @@ task RunSTAR {
     }
 
     Int numThreads = 32
+    Float inputSize = size(fasta, "GiB") + size(gtf, "GiB")
 
     command <<<
         set -euo pipefail
@@ -30,7 +31,7 @@ task RunSTAR {
 
     runtime {
         docker: "hisplan/cromwell-star:2.5.3a"
-        # disks: "local-disk 100 HDD"
+        # disks: "local-disk " + ceil(10 * (if inputSize < 1 then 5 else inputSize)) + " HDD"
         cpu: numThreads
         memory: "128 GB"
     }

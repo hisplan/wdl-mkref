@@ -11,6 +11,8 @@ task AddPrefixGtf {
         prefix: "e.g. HUMAN or MOUSE"
     }
 
+    Float inputSize = size(gzippedGtf, "GiB")
+
     command <<<
         set -euo pipefail
 
@@ -26,7 +28,7 @@ task AddPrefixGtf {
 
     runtime {
         docker: "ubuntu:18.04"
-        # disks: "local-disk 100 HDD"
+        # disks: "local-disk " + ceil(10 * (if inputSize < 1 then 5 else inputSize)) + " HDD"
         cpu: 1
         memory: "1 GB"
     }
@@ -38,6 +40,8 @@ task AddPrefixFasta {
         String prefix
         File gzippedFasta
     }
+
+    Float inputSize = size(gzippedFasta, "GiB")
 
     command <<<
         set -euo pipefail
@@ -54,7 +58,7 @@ task AddPrefixFasta {
 
     runtime {
         docker: "ubuntu:18.04"
-        # disks: "local-disk 100 HDD"
+        # disks: "local-disk " + ceil(10 * (if inputSize < 1 then 5 else inputSize)) + " HDD"
         cpu: 1
         memory: "1 GB"
     }

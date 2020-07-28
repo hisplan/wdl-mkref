@@ -11,6 +11,8 @@ task Merge {
         extension: "e.g. gtf or fasta"
     }
 
+    Float inputSize = size(files, "GiB")
+
     command <<<
         set -euo pipefail
 
@@ -23,7 +25,7 @@ task Merge {
 
     runtime {
         docker: "ubuntu:18.04"
-        # disks: "local-disk 100 HDD"
+        # disks: "local-disk " + ceil(10 * (if inputSize < 1 then 5 else inputSize)) + " HDD"
         cpu: 1
         memory: "1 GB"
     }
