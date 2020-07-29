@@ -79,5 +79,6 @@ workflow mkref {
     output {
         File outGtf = FilterBiotypes.outGtf
         Array[File] outSTAR = RunSTAR.outs
+        File outFilterLog = FilterBiotypes.outLog
     }
 }

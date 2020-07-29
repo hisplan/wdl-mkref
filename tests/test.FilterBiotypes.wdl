@@ -16,6 +16,7 @@ workflow FilterBiotypes {
     }
 
     output {
-        File out = FilterBiotypes.outGtf
+        File outGtf = FilterBiotypes.outGtf
+        File outLog = FilterBiotypes.outLog
     }
 }
