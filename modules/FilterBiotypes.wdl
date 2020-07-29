@@ -24,7 +24,7 @@ task FilterBiotypes {
     }
 
     runtime {
-        docker: "hisplan/gtf-utils:0.0.3"
+        docker: "hisplan/gtf-utils:0.0.4"
         # disks: "local-disk " + ceil(10 * (if inputSize < 1 then 5 else inputSize)) + " HDD"
         cpu: 4
         memory: "64 GB"
