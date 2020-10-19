@@ -30,7 +30,7 @@ task RunSTAR {
     }
 
     runtime {
-        docker: "hisplan/cromwell-star:2.5.3a"
+        docker: "hisplan/cromwell-star:2.7.6a"
         # disks: "local-disk " + ceil(10 * (if inputSize < 1 then 5 else inputSize)) + " HDD"
         cpu: numThreads
         memory: "128 GB"
