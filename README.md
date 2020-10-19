@@ -32,7 +32,7 @@ Generating a hybrid (human + mouse) scRNA-seq STAR reference:
 ```bash
 $ ./submit.sh \
     -k ~/keys/secrets-aws.json \
-    -i configs/mkref.inputs.json \
-    -l configs/mkref.labels.aws.json \
+    -i configs/mkref-GRCh38-GRCm38-Ensembl100.inputs.json \
+    -l configs/mkref-GRCh38-GRCm38-Ensembl100.labels.aws.json \
     -o mkref.options.aws.json
 ```

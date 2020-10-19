@@ -29,9 +29,6 @@ then
     exit 1
 fi
 
-rm -rf mkref.deps.zip
-zip mkref.deps.zip modules modules/*
-
 cromwell-tools submit \
     --secrets-file ${service_account_key} \
     --wdl mkref.wdl \
