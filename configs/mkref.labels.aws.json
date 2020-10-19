@@ -1,7 +1,7 @@
 {
     "pipelineType": "mkref",
-    "project": "Ensembl 99 / GRCh38+GRCm38",
-    "sample": "Ensembl 99 / GRCh38+GRCm38",
+    "project": "Ensembl 100 / GRCh38+GRCm38",
+    "sample": "Ensembl 100 / GRCh38+GRCm38",
     "owner": "chunj",
     "destination": "s3://dp-lab-batch/outputs/mkref/",
     "transfer": "-",
