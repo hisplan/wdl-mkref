@@ -1,6 +1,6 @@
 {
     "mkref.genomeVersion": "38",
-    "mkref.ensemblVersion": "100",
+    "mkref.ensemblVersion": "85",
     "mkref.sjdbOverhang": 101,
     "mkref.biotypes": [
         "protein_coding",
@@ -15,5 +15,5 @@
         "TR_J_gene",
         "TR_C_gene"
     ],
-    "mkref.starVersion": "2.7.6a"
+    "mkref.starVersion": "2.5.3a"
 }
