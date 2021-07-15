@@ -8,13 +8,15 @@ workflow RunSTAR {
         File fasta
         File gtf
         Int sjdbOverhang
+        String starVersion
     }
 
     call RunSTAR.RunSTAR {
         input:
             fasta = fasta,
             gtf = gtf,
-            sjdbOverhang = sjdbOverhang
+            sjdbOverhang = sjdbOverhang,
+            starVersion = starVersion
     }
 
     output {

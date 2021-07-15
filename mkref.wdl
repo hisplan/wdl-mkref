@@ -13,6 +13,7 @@ workflow mkref {
         String ensemblVersion
         Array[String] biotypes
         Int sjdbOverhang
+        String starVersion
     }
 
     call DownloadEnsembl.DownloadEnsemblHuman {
@@ -73,7 +74,8 @@ workflow mkref {
         input:
             fasta = MergeFasta.outMergedFile,
             gtf = FilterBiotypes.outGtf,
-            sjdbOverhang = sjdbOverhang
+            sjdbOverhang = sjdbOverhang,
+            starVersion = starVersion
     }
 
     output {

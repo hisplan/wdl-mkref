@@ -1,5 +1,6 @@
 {
     "RunSTAR.fasta": "s3://dp-lab-batch/cromwell-execution/mkref/735f7b4c-e142-46d0-af61-c1f73ab9d8aa/call-MergeFasta/merged.fasta",
     "RunSTAR.gtf": "s3://dp-lab-batch/cromwell-execution/mkref/735f7b4c-e142-46d0-af61-c1f73ab9d8aa/call-MergeGtf/merged.gtf",
-    "RunSTAR.sjdbOverhang": 101
+    "RunSTAR.sjdbOverhang": 101,
+    "RunSTAR.starVersion": "2.7.6a"
 }
