@@ -79,6 +79,7 @@ workflow mkref {
     }
 
     output {
+        # File outFasta = MergeFasta.outMergedFile
         File outGtf = FilterBiotypes.outGtf
         Array[File] outSTAR = RunSTAR.outs
         File outFilterLog = FilterBiotypes.outLog
