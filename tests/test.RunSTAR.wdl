@@ -9,6 +9,9 @@ workflow RunSTAR {
         File gtf
         Int sjdbOverhang
         String starVersion
+
+        # docker-related
+        String dockerRegistry
     }
 
     call RunSTAR.RunSTAR {
@@ -16,7 +19,8 @@ workflow RunSTAR {
             fasta = fasta,
             gtf = gtf,
             sjdbOverhang = sjdbOverhang,
-            starVersion = starVersion
+            starVersion = starVersion,
+            dockerRegistry = dockerRegistry
     }
 
     output {

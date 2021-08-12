@@ -14,6 +14,9 @@ workflow mkref {
         Array[String] biotypes
         Int sjdbOverhang
         String starVersion
+
+        # docker-related
+        String dockerRegistry
     }
 
     call DownloadEnsembl.DownloadEnsemblHuman {
@@ -67,7 +70,8 @@ workflow mkref {
     call FilterBiotypes.FilterBiotypes {
         input:
             biotypes = biotypes,
-            gtf = MergeGtf.outMergedFile
+            gtf = MergeGtf.outMergedFile,
+            dockerRegistry = dockerRegistry
     }
 
     call RunSTAR.RunSTAR {
@@ -75,7 +79,8 @@ workflow mkref {
             fasta = MergeFasta.outMergedFile,
             gtf = FilterBiotypes.outGtf,
             sjdbOverhang = sjdbOverhang,
-            starVersion = starVersion
+            starVersion = starVersion,
+            dockerRegistry = dockerRegistry
     }
 
     output {

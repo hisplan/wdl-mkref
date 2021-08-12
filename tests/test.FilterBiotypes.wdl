@@ -7,12 +7,16 @@ workflow FilterBiotypes {
     input {
         Array[String] biotypes
         File gtf
+
+        # docker-related
+        String dockerRegistry
     }
 
     call FilterBiotypes.FilterBiotypes {
         input:
             biotypes = biotypes,
-            gtf = gtf
+            gtf = gtf,
+            dockerRegistry = dockerRegistry
     }
 
     output {
