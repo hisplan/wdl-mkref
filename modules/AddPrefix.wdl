@@ -27,8 +27,8 @@ task AddPrefixGtf {
     }
 
     runtime {
-        docker: "ubuntu:18.04"
-        # disks: "local-disk " + ceil(10 * (if inputSize < 1 then 5 else inputSize)) + " HDD"
+        docker: "ubuntu:20.04"
+        disks: "local-disk " + ceil(10 * (if inputSize < 1 then 5 else inputSize)) + " HDD"
         cpu: 1
         memory: "1 GB"
     }
@@ -57,8 +57,8 @@ task AddPrefixFasta {
     }
 
     runtime {
-        docker: "ubuntu:18.04"
-        # disks: "local-disk " + ceil(10 * (if inputSize < 1 then 5 else inputSize)) + " HDD"
+        docker: "ubuntu:20.04"
+        disks: "local-disk " + ceil(10 * (if inputSize < 1 then 5 else inputSize)) + " HDD"
         cpu: 1
         memory: "1 GB"
     }
