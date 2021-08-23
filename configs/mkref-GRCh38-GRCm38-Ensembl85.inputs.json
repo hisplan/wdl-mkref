@@ -15,5 +15,6 @@
         "TR_J_gene",
         "TR_C_gene"
     ],
-    "mkref.starVersion": "2.5.3a"
+    "mkref.starVersion": "2.5.3a",
+    "mkref.dockerRegistry": "quay.io/hisplan"
 }
