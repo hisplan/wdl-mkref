@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 wf_name="mkref"
-version="0.0.4"
+version="0.0.5"
 files="submit.sh mkref.deps.zip mkref.wdl mkref.options.aws.json"
 dest="$HOME/scing/bin"
 
