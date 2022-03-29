@@ -1,0 +1,9 @@
+{
+    "pipelineType": "mkref",
+    "project": "Ensembl 98 / GRCh38+GRCm38",
+    "sample": "Ensembl 98 / GRCh38+GRCm38",
+    "owner": "chunj",
+    "destination": "s3://seqc-public/genomes/GRCh38-GRCm38-Ensembl98/",
+    "transfer": "-",
+    "comment": ""
+}
