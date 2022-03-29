@@ -8,8 +8,8 @@ task DownloadEnsemblHuman {
     }
 
     parameter_meta {
-        genomeVersion: "e.g. 38 (as in GRCh38 or GRCm38"
-        ensemblVersion: "e.g. 99 (as in Ensembl Release 99"
+        genomeVersion: "e.g. 38 (as in GRCh38)"
+        ensemblVersion: "e.g. 99 (as in Ensembl Release 99)"
     }
 
     command <<<
@@ -43,6 +43,11 @@ task DownloadEnsemblMouse {
     input {
         String genomeVersion
         String ensemblVersion
+    }
+
+    parameter_meta {
+        genomeVersion: "e.g. 38 (as in GRCm38)"
+        ensemblVersion: "e.g. 99 (as in Ensembl Release 99)"
     }
 
     command <<<
